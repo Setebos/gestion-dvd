@@ -1,0 +1,9 @@
+template(name="movieList")
+    .col-xs-6.col-md-3
+        .thumbnail
+            img(src="http://placehold.it/350x150")
+            .caption
+                h3 #{title}
+                p #{description}
+                p
+                    a.btn.btn-primary(href="{{pathFor 'showMovie'}}") Voir
