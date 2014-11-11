@@ -1,8 +1,12 @@
 template(name="homepage")
     .col-xs-12
-        .col-xs-4.col-xs-offset-8
-            input.form-control.pull-right(name="search" type='text' placeholder="Search")
+        +searchForm
         .row
+            h2 Catégories
+            each categories
+                +categoryList
+        .row
+            h2 Derniers films ajoutés
             each movies
                 +movieList
             

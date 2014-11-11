@@ -1,0 +1,16 @@
+template(name="showCategory")
+    .col-xs-12
+        +searchForm
+        h2 Categorie : #{title}
+        table.table.table-striped
+            thead
+                tr
+                    th Titre
+                    th Réalisateur
+                    th Date
+            tbody
+                each movies
+                    tr
+                        td #{title}
+                        td #{director}
+                        td #{date}

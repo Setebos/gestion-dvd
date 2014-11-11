@@ -1,0 +1,8 @@
+template(name="categoryList")
+    .col-xs-6.col-md-3
+        .thumbnail
+            img(src="#{image}")
+            .caption
+                h3 #{title}
+                p
+                    a.btn.btn-primary(href="{{pathFor 'showCategory'}}") Voir
