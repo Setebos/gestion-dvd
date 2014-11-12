@@ -8,9 +8,12 @@ template(name="showCategory")
                     th Titre
                     th Réalisateur
                     th Date
+                    th Actions
             tbody
                 each movies
                     tr
                         td #{title}
                         td #{director}
                         td #{date}
+                        td 
+                            a(href="{{pathFor 'showMovie'}}") Voir

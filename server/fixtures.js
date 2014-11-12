@@ -1,4 +1,6 @@
 if(Meteor.users.find().count() === 0) {
+    var now = new Date().getTime();
+    
     var setebosId = Accounts.createUser({
         username: 'Setebos',
         password: 'password'
@@ -19,18 +21,21 @@ if(Meteor.users.find().count() === 0) {
     Movies.insert({
         title: 'Film 1',
         description: 'Ceci est une description de film',
-        categoryId: category1
+        categoryId: category1,
+        creationDate: now - 7 * 3600 * 1000,
     });
 
     Movies.insert({
         title: 'Film 2',
         description: 'Ceci est une description de film',
-        categoryId: category1
+        categoryId: category1,
+        creationDate: now,
     });
 
     Movies.insert({
         title: 'Film 3',
         description: 'Ceci est une description de film',
-        categoryId: category2
+        categoryId: category2,
+        creationDate: now - 5 * 3600 * 1000,
     });
 }
