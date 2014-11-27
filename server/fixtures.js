@@ -23,6 +23,9 @@ if(Meteor.users.find().count() === 0) {
         description: 'Ceci est une description de film',
         categoryId: category1,
         creationDate: now - 7 * 3600 * 1000,
+        image: 'http://www.halopedia.org/images/thumb/5/5d/Superintendant-alone.svg/275px-Superintendant-alone.svg.png',
+        director: "Mr Machin",
+        realisationDate : now,
     });
 
     Movies.insert({
@@ -30,6 +33,9 @@ if(Meteor.users.find().count() === 0) {
         description: 'Ceci est une description de film',
         categoryId: category1,
         creationDate: now,
+        image: 'http://www.halopedia.org/images/thumb/5/5d/Superintendant-alone.svg/275px-Superintendant-alone.svg.png',
+        director: "Mr Truc",
+        realisationDate : now,
     });
 
     Movies.insert({
@@ -37,5 +43,8 @@ if(Meteor.users.find().count() === 0) {
         description: 'Ceci est une description de film',
         categoryId: category2,
         creationDate: now - 5 * 3600 * 1000,
+        image: 'http://www.halopedia.org/images/thumb/5/5d/Superintendant-alone.svg/275px-Superintendant-alone.svg.png',
+        director: "Mr Bidule",
+        realisationDate : now,
     });
 }

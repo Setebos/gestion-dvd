@@ -6,6 +6,10 @@ Meteor.publish('moviesByCategory', function(id) {
     return Movies.find({categoryId: id});
 });
 
+Meteor.publish('oneMovie', function(id) {
+    return Movies.find({_id: id});
+});
+
 Meteor.publish('categories', function() {
     return Categories.find();
 });
