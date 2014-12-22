@@ -1,19 +1,17 @@
 template(name="showCategory")
-    .col-xs-12
-        +searchForm
-        h2 Categorie : #{title}
-        table.table.table-striped
-            thead
+    h2 Categorie : #{title}
+    table.table.table-striped
+        thead
+            tr
+                th Titre
+                th Réalisateur
+                th Date
+                th Actions
+        tbody
+            each movies
                 tr
-                    th Titre
-                    th Réalisateur
-                    th Date
-                    th Actions
-            tbody
-                each movies
-                    tr
-                        td #{title}
-                        td #{director}
-                        td #{date}
-                        td 
-                            a(href="{{pathFor 'showMovie'}}") Voir
+                    td #{title}
+                    td #{director}
+                    td #{date}
+                    td 
+                        a(href="{{pathFor 'showMovie'}}") Voir

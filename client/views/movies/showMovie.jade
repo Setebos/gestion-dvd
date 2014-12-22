@@ -1,0 +1,18 @@
+template(name="showMovie")
+	h2 Film : #{title}
+	.col-xs-4
+		img(src="#{image}")
+	.col-xs-8
+		table.table
+			tbody
+				tr
+					th Date de sortie : 
+					td {{formatDate realisationDate}}
+				tr
+					th Réalisé par : 
+					td #{director}
+				tr
+					th Catégorie : 
+					td 
+						a(href="{{pathFor 'showCategory' _id=category._id}}") #{category.title}
+	p #{description}
